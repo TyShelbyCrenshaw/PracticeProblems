@@ -1,7 +1,7 @@
 ﻿namespace PracticeProblems.Problems;
-public class ProgramShortestPalindrome
+public class ShortestPalindrome
 {
-	public string ShortestPalindrome(string s)
+	public string FindShortestPalindrome(string s)
 	{
 		string buildString = s;
 
@@ -80,15 +80,15 @@ public class ProgramShortestPalindrome
 
 	public static void Test()
 	{
-		var solution = new ProgramShortestPalindrome();
+		var solution = new ShortestPalindrome();
 
-		string result1 = solution.ShortestPalindrome("aacecaaa");
+		string result1 = solution.FindShortestPalindrome("aacecaaa");
 		Console.WriteLine($"Test 1: Expected 'aaacecaaa', Got '{result1}'");
 
-		string result2 = solution.ShortestPalindrome("abcd");
+		string result2 = solution.FindShortestPalindrome("abcd");
 		Console.WriteLine($"Test 2: Expected 'dcbabcd', Got '{result2}'");
 
-		string result3 = solution.ShortestPalindrome("abcabc");
+		string result3 = solution.FindShortestPalindrome("abcabc");
 		Console.WriteLine($"Test 3: Expected 'cbacbabcabc', Got '{result3}'");
 	}
 }

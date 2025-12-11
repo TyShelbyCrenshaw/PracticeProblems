@@ -1,6 +1,6 @@
 ﻿namespace PracticeProblems.Problems;
 
-public class ProgramFindTheIndex
+public class FindTheIndex
 {
 	public int StrStr(string haystack, string needle)
 	{
@@ -32,7 +32,7 @@ public class ProgramFindTheIndex
 
 	public static void Test()
 	{
-		var solution = new ProgramFindTheIndex();
+		var solution = new FindTheIndex();
 
 		int result1 = solution.StrStr("sadbutsad", "sad");
 		Console.WriteLine($"Test 1: Expected 0, Got {result1}");

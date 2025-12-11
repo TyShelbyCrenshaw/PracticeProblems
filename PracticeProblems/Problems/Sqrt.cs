@@ -1,7 +1,7 @@
 ﻿namespace PracticeProblems.Problems;
 
 
-public class ProgramSqrt
+public class Sqrt
 {
 	public int MySqrt(int x)
 	{
@@ -45,7 +45,7 @@ public class ProgramSqrt
 	// Test method
 	public static void Test()
 	{
-		var solution = new ProgramSqrt();
+		var solution = new Sqrt();
 
 		// Test 1: sqrt(4) = 2
 		int result1 = solution.MySqrt(4);

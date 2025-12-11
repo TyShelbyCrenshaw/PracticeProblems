@@ -1,5 +1,5 @@
 ﻿namespace PracticeProblems.Problems;
-public class ProgramPlusOne
+public class PlusOne
 {
 	// This does not work if the array is long and cannot fit into an Int64
 	// public int[] PlusOne(int[] digits) {
@@ -122,7 +122,7 @@ public class ProgramPlusOne
 	// }
 
 	//Cluade recursive
-	public int[] PlusOne(int[] digits)
+	public int[] MyPlusOne(int[] digits)
 	{
 		// Base case: empty array means we had all 9s and need to prepend 1
 		if (digits.Length == 0)
@@ -142,7 +142,7 @@ public class ProgramPlusOne
 
 		// Last digit is 9, so set it to 0 and recurse on remaining digits
 		int[] remaining = digits[..^1];  // All digits except the last one
-		int[] result = PlusOne(remaining);
+		int[] result = MyPlusOne(remaining);
 
 		// Append the 0 to the result
 		return result.Concat(new[] { 0 }).ToArray();
@@ -151,30 +151,30 @@ public class ProgramPlusOne
 	// Test method with the correct test cases for Plus One
 	public static void Test()
 	{
-		var solution = new ProgramPlusOne();
+		var solution = new PlusOne();
 
 		// Test 1: [1,2,3] -> [1,2,4]
-		int[] result1 = solution.PlusOne(new int[] { 1, 2, 3 });
+		int[] result1 = solution.MyPlusOne(new int[] { 1, 2, 3 });
 		Console.WriteLine($"Test 1: Expected [1,2,4], Got [{string.Join(",", result1)}]");
 
 		// Test 2: [4,3,2,1] -> [4,3,2,2]
-		int[] result2 = solution.PlusOne(new int[] { 4, 3, 2, 1 });
+		int[] result2 = solution.MyPlusOne(new int[] { 4, 3, 2, 1 });
 		Console.WriteLine($"Test 2: Expected [4,3,2,2], Got [{string.Join(",", result2)}]");
 
 		// Test 3: [9] -> [1,0]
-		int[] result3 = solution.PlusOne(new int[] { 9 });
+		int[] result3 = solution.MyPlusOne(new int[] { 9 });
 		Console.WriteLine($"Test 3: Expected [1,0], Got [{string.Join(",", result3)}]");
 
 		// Test 4: [9,9,9] -> [1,0,0,0] (edge case with all 9s)
-		int[] result4 = solution.PlusOne(new int[] { 9, 9, 9 });
+		int[] result4 = solution.MyPlusOne(new int[] { 9, 9, 9 });
 		Console.WriteLine($"Test 4: Expected [1,0,0,0], Got [{string.Join(",", result4)}]");
 
 		// Test 5: [1,9,9] -> [2,0,0]
-		int[] result5 = solution.PlusOne(new int[] { 1, 9, 9 });
+		int[] result5 = solution.MyPlusOne(new int[] { 1, 9, 9 });
 		Console.WriteLine($"Test 5: Expected [2,0,0], Got [{string.Join(",", result5)}]");
 
 		// Test 6: [9,8,7,6,5,4,3,2,1,0] -> [9,8,7,6,5,4,3,2,1,1]
-		int[] result6 = solution.PlusOne(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
+		int[] result6 = solution.MyPlusOne(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 });
 		Console.WriteLine($"Test 5: Expected [9,8,7,6,5,4,3,2,1,1], Got [{string.Join(",", result6)}]");
 	}
 }

@@ -12,7 +12,6 @@ public class LongestSubstring
 		var currentList = "";
 		var longestList = "";
 
-		//loop though the string if we are a new character
 		for(int i = 0; i < s.Length; i++)
 		{
 			if(currentList.Contains(s[i]))
@@ -22,7 +21,7 @@ public class LongestSubstring
 					longestList = currentList;
 				}
 				//how many character can we keep
-				//basically we need to start removing character from the front till we are a string
+				//basically we need to start removing character from the front till we are a good string
 				while(currentList.Contains(s[i]) && currentList.Length > 0)
 				{
 					currentList = currentList.Remove(0, 1);

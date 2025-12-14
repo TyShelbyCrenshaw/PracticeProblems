@@ -5,4 +5,7 @@
 //PlusOne.Test();
 //AddBinary.Test();
 //Sqrt.Test();
-LongestSubstring.Test();
+//LongestSubstring.Test();
+//RomanToInteger.Test();
+//MedianTwoSortedArrays.Test();
+RemoveDuplicatesSortedList.Test();

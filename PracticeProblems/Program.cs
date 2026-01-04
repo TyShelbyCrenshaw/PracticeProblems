@@ -8,4 +8,5 @@
 //LongestSubstring.Test();
 //RomanToInteger.Test();
 //MedianTwoSortedArrays.Test();
-RemoveDuplicatesSortedList.Test();
+//RemoveDuplicatesSortedList.Test();
+FourDivisors.Tests();
